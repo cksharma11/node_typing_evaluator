@@ -51,6 +51,10 @@ const calResult = function(originalText, typedText, time) {
   const typedWords = getWordsOfText(typedText);
   let totalWords = originalWords.length;
   let correctWordCount = getMatchingWordCount(originalWords, typedWords);
+  return getTypingResult(correctWordCount, totalWords, time);
+};
+
+const getTypingResult = function(correctWordCount, totalWords, time) {
   return {
     accuracy: (correctWordCount / totalWords) * 100,
     speed: typedWords.length / (time / 60)
