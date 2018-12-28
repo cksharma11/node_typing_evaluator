@@ -38,11 +38,11 @@ const getWordsOfText = function(text) {
 };
 
 const getMatchingWordCount = function(originalWords, typedWords) {
-  const matchingWordCount = getCorrectWords(originalWords, typedWords);
+  const matchingWordCount = getMatchingIndex(originalWords, typedWords);
   return matchingWordCount.length;
 };
 
-const getCorrectWords = function(list1, list2) {
+const getMatchingIndex = function(list1, list2) {
   return list1.filter((element, index) => list1[index] == list2[index]);
 };
 
@@ -73,6 +73,6 @@ module.exports = {
   formatText,
   getTypedContent,
   getResult,
-  getCorrectWords,
+  getMatchingIndex,
   calResult
 };

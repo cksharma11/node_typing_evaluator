@@ -1,12 +1,12 @@
 const assert = require('assert');
-const { getCorrectWords, calResult } = require('../src/lib.js');
+const { getMatchingIndex, calResult } = require('../src/lib.js');
 
-describe('getCorrectWords', () => {
+describe('getMatchingIndex', () => {
   it('should give non equal values between two lists for same length', () => {
     const list1 = [1, 2];
     const list2 = [1, 3];
     const expectedOutput = [1];
-    const actualOutput = getCorrectWords(list1, list2);
+    const actualOutput = getMatchingIndex(list1, list2);
 
     assert.deepEqual(actualOutput, expectedOutput);
   });
@@ -15,7 +15,7 @@ describe('getCorrectWords', () => {
     const list1 = [1, 2, 3];
     const list2 = [1, 3];
     const expectedOutput = [1];
-    const actualOutput = getCorrectWords(list1, list2);
+    const actualOutput = getMatchingIndex(list1, list2);
 
     assert.deepEqual(actualOutput, expectedOutput);
   });
@@ -24,7 +24,7 @@ describe('getCorrectWords', () => {
     const list1 = [1, 2];
     const list2 = [1, 3, 4, 5];
     const expectedOutput = [1];
-    const actualOutput = getCorrectWords(list1, list2);
+    const actualOutput = getMatchingIndex(list1, list2);
 
     assert.deepEqual(actualOutput, expectedOutput);
   });
