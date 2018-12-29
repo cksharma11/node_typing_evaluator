@@ -1,0 +1,6 @@
+Each of Mozilla's JavaScript engines expose a public API 
+which application developers can use to integrate JavaScript
+into their software. By far, the most common host environment 
+for JavaScript is web browsers. Web browsers typically use the 
+public API to create host objects responsible for reflecting 
+the DOM into JavaScript.

@@ -1,0 +1,7 @@
+Contrary to popular misconception, JavaScript is not "Interpreted Java". 
+In a nutshell, JavaScript is a dynamic scripting language supporting 
+prototype based object construction. The basic syntax is intentionally 
+similar to both Java and C++ to reduce the number of new concepts required 
+to learn the language. Language constructs, such as if statements, for and 
+while loops, and switch and try ... catch blocks function the same as in 
+these languages (or nearly so).

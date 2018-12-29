@@ -4,7 +4,8 @@ const fs = require('fs');
 const chalk = require('chalk');
 const moment = require('moment');
 
-const files = ['smallFile', 'largeFile'];
+const files = ['smallFile', 'largeFile', 'testData1', 'testData2', 'testData3'];
+const fileIndex = Math.floor(Math.random(1) * 4);
 const contentBox = new Table({
   head: ['Best Of Luck'],
   colWidths: [80],
@@ -12,7 +13,7 @@ const contentBox = new Table({
 });
 
 const getContent = function() {
-  return fs.readFileSync('./src/typingContents/' + files[0], 'utf8');
+  return fs.readFileSync('./src/typingContents/' + files[fileIndex], 'utf8');
 };
 
 const formatText = function() {
@@ -74,5 +75,7 @@ module.exports = {
   getTypedContent,
   getResult,
   getMatchingIndex,
-  calResult
+  calResult,
+  getMatchingWordCount,
+  getWordsOfText
 };
